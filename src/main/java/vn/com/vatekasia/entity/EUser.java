@@ -27,7 +27,7 @@ public class EUser {
     private String fullname;
 
     @Column
-    private String phone;
+    private String phonenumber;
 
     @Column(unique = true)
     private String email;

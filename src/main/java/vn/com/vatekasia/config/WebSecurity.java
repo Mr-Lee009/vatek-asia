@@ -12,14 +12,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .cors().and()
                 .csrf().disable().authorizeRequests()
                 .antMatchers("/web/**").hasRole("manager")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin();
+                .anyRequest().authenticated();
 
-        //Trang chỉ dành cho ADMIN
         http.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
 
-        System.out.println("Check url ABC");
         http.authorizeRequests()
                 .and()
                     .formLogin()
