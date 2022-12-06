@@ -11,7 +11,7 @@
 **NOTE:** chỉ viết API
 
 ***
-###I.Giao diện admin
+### I.Giao diện admin
 
 >- giao diện quản lý users.
 >- quản lý phòng (VD: phòng bt, phòng vip, phòng luxury) giá tiền phòng có thể thay đổi theo thời gian và mùa,
@@ -20,7 +20,7 @@
 >- xuất báo cáo số lượng khách đặt phòng trong tháng, và doanh thu của tháng đó bằng excel.
 
 ***
-###II.Giao diện web
+### II.Giao diện web
 
 >- đăng kí user.
 >- chức năng kiểm tra còn phòng trống theo thời gian, sắp xếp phòng theo type và giá phòng
