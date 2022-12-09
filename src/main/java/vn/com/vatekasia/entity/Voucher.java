@@ -25,6 +25,8 @@ public class Voucher extends BaseEntity {
     private EDiscountType discountType;
     @Column(name = "total_price")
     private double totalPrice;
+    @Column(name = "quantity")
+    private int quantity;
     @Column(name = "description")
     private String description;
     @Column(name = "expired_date")

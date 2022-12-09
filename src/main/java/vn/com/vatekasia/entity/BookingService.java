@@ -26,8 +26,4 @@ public class BookingService extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "booking_room_id")
     private BookingRoom bookingRoom;
-    @JsonIgnore
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "combo_id")
-    private Combo combo;
 }

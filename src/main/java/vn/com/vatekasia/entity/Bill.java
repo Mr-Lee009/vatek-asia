@@ -27,10 +27,5 @@ public class Bill extends BaseEntity {
     private EUser user;
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "bill")
     private List<BookingRoom> bookingRooms;
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "voucher_used_bill",
-            joinColumns = @JoinColumn(name = "bill_id"),
-            inverseJoinColumns = @JoinColumn(name = "voucher_id"))
-    private List<Voucher> vouchers;
 
 }

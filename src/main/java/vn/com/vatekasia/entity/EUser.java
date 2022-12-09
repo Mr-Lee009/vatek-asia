@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+import vn.com.vatekasia.enumeration.EUserRole;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -33,6 +34,9 @@ public class EUser {
     private String password;
     @Column
     private String active;
+    @Column
+    @Enumerated(EnumType.STRING)
+    private EUserRole role;
     @CreationTimestamp
     @Column(name = "created_time")
     private LocalDateTime createdTime;

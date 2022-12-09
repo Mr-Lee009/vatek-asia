@@ -6,7 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class ResponseDTO<T> {
-    private String errorCode;
+    private int code;
+    private String nameCode;
     private String message;
     private T data;
 

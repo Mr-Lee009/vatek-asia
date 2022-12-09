@@ -30,6 +30,7 @@ public class Combo extends BaseEntity {
     private String description;
     @Column(name = "expired_date")
     private LocalDateTime expiredDate;
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "combo")
-    private List<BookingService> bookingServices;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "room_type_id")
+    private RoomType roomType;
 }
