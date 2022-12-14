@@ -1,4 +1,4 @@
-package vn.com.vatekasia.entity;
+package vn.com.vatekasia.controller.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
