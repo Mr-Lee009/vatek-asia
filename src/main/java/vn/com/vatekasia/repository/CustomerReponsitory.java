@@ -13,4 +13,7 @@ import vn.com.vatekasia.entity.Customer;
 public interface CustomerReponsitory extends JpaRepository<Customer, Long> {
 	@Query("SELECT u FROM Customer u WHERE u.name LIKE :x")
 	Page<Customer> searchAll(@Param("x") String s, Pageable pageable);
+
+	@Query("SELECT u FROM Customer u WHERE u.id = uId ")
+	Page<Customer> searchById(@Param("uId") Long id, Pageable pageable);
 }

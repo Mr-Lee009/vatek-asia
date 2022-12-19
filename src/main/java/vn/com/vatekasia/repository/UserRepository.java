@@ -15,4 +15,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Query("SELECT u FROM User u WHERE u.username LIKE :x")
 	Page<User> searchAll(@Param("x") String s, Pageable pageable);
+
+	@Query("SELECT u FROM User u WHERE u.id = uId ")
+	Page<User> searchById(@Param("uId") Long id, Pageable pageable);
 }

@@ -31,7 +31,7 @@ public class Bill {
 	private User user;
 
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "customerId")
+	@JoinColumn(name = "customer_id")
 	private Customer customer;
 
 }

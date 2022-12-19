@@ -1,11 +1,6 @@
 package vn.com.vatekasia.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.Data;
 
@@ -23,5 +18,7 @@ public class Coupon {
 	private String condition;
 	private String status;
 	private String discountAmount;
-
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_id")
+	private User user;
 }
