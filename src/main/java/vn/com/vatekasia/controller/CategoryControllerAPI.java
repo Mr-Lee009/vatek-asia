@@ -73,7 +73,6 @@ public class CategoryControllerAPI {
 		listCategory.setTotalPage(pageCategory.getTotalPages());
 		listCategory.setSize(size);
 		listCategory.setPage(page);
-
 		return listCategory;
 	}
 }

@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
-import vn.com.vatekasia.service.TypeRoomEnum;
+import vn.com.vatekasia.enumeration.TypeRoomEnum;
 
 @Table
 @Entity
@@ -40,4 +40,5 @@ public class Room {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "billId")
 	private Bill bill;
+
 }

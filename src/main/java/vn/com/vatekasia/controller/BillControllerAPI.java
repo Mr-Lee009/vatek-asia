@@ -32,7 +32,6 @@ public class BillControllerAPI {
         return bill;
 
     }
-
     @DeleteMapping("/delete")
     public void delete(@RequestParam(value = "id") Long id) {
         billRepo.deleteById(id);

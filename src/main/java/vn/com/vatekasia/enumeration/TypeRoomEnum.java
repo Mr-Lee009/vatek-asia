@@ -1,4 +1,4 @@
-package vn.com.vatekasia.service;
+package vn.com.vatekasia.enumeration;
 
 public enum TypeRoomEnum {
 	vip, normal

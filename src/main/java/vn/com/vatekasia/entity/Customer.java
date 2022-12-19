@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
-import vn.com.vatekasia.service.TypePersonEnum;
+import vn.com.vatekasia.enumeration.TypePersonEnum;
 
 @Table
 @Entity
