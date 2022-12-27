@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import vn.com.vatekasia.dto.ListTypeServiceRoom;
+import vn.com.vatekasia.util.ListTypeServiceRoom;
 import vn.com.vatekasia.entity.Room;
 import vn.com.vatekasia.entity.Service;
 import vn.com.vatekasia.entity.TypeServiceRoom;

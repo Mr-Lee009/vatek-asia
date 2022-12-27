@@ -6,7 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
-import vn.com.vatekasia.dto.ListBill;
+import vn.com.vatekasia.util.ListBill;
 import vn.com.vatekasia.entity.Bill;
 import vn.com.vatekasia.entity.Customer;
 import vn.com.vatekasia.entity.User;
@@ -23,7 +23,6 @@ public class BillControllerAPI {
     UserRepository userRepo;
     @Autowired
     CustomerReponsitory customerRepo;
-
     @PostMapping("/create")
     public Bill create(@RequestBody Bill bill) {
         List<User> users = userRepo.findAll();
@@ -56,7 +55,6 @@ public class BillControllerAPI {
                            @RequestParam(name = "sortBy", required = false) Integer sortBy,
                            @RequestParam(name = "page", required = false) Integer page,
                            @RequestParam(name = "size", required = false) Integer size) {
-
         if (size == null)
             size = 3;// max records per page
         if (page == null)

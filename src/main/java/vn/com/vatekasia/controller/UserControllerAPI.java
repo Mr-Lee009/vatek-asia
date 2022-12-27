@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import vn.com.vatekasia.dto.ListUser;
+import vn.com.vatekasia.util.ListUser;
 import vn.com.vatekasia.entity.User;
 import vn.com.vatekasia.repository.UserRepository;
 

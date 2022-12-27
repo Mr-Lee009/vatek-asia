@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import vn.com.vatekasia.dto.ListCategory;
+import vn.com.vatekasia.util.ListCategory;
 import vn.com.vatekasia.entity.Category;
 import vn.com.vatekasia.repository.CategoryRepository;
 

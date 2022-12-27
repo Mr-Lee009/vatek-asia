@@ -1,4 +1,4 @@
-package vn.com.vatekasia.dto;
+package vn.com.vatekasia.util;
 
 import java.util.List;
 

@@ -6,7 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
-import vn.com.vatekasia.dto.ListCoupon;
+import vn.com.vatekasia.util.ListCoupon;
 import vn.com.vatekasia.entity.Coupon;
 import vn.com.vatekasia.entity.User;
 import vn.com.vatekasia.repository.CouponRepository;
@@ -49,6 +49,7 @@ public class CouponControllerAPI {
     @PostMapping("/search")
     public ListCoupon search(@RequestParam(name = "name", required = false) String name,
                              @RequestParam(name = "id", required = false) Long id,
+                             @RequestParam(name = "userId", required = false) Long userId,
                              @RequestParam(name = "sortBy", required = false) Integer sortBy,
                              @RequestParam(name = "page", required = false) Integer page,
                              @RequestParam(name = "size", required = false) Integer size) {
@@ -64,7 +65,9 @@ public class CouponControllerAPI {
 
         Pageable pageable = PageRequest.of(page, size, sort);
         Page<Coupon> pageCoupon = null;
-        if (name != null && !name.isEmpty()) {
+        if (userId != null) {
+            Page<Coupon> couponPage = couponRepo.searchByUser(userId, pageable);
+        } else if (name != null && !name.isEmpty()) {
             pageCoupon = couponRepo.searchAll("%" + name + "%", pageable);
 
         } else {

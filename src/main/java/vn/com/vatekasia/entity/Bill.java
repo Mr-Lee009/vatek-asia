@@ -24,8 +24,9 @@ public class Bill {
 	private Date buyDate;
 	private Long totalPay;
 	private Long totalPayment;
-	private double price; // để double tránh trùng số nguyên
-
+	private double price;
+//	private String couponCode;
+	private int discount;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
 	private User user;
@@ -33,5 +34,4 @@ public class Bill {
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "customer_id")
 	private Customer customer;
-
 }

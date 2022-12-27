@@ -12,12 +12,12 @@ import vn.com.vatekasia.service.BillService;
 
 @RestController
 @RequestMapping("/api/book-room")
-public class BookRoomControllerAPI {
+  public class BookRoomControllerAPI {
   @Autowired
   BillService billService;
     @PostMapping("/create")
     private ResponseDTO<BillDTO>create(@RequestBody BookRoomDTO bookRoomDTO) {
-            BillDTO billDTO = billService.createBookRoom(bookRoomDTO);
+      BillDTO billDTO = billService.createBookRoom(bookRoomDTO);
       return ResponseDTO.<BillDTO>builder().data(billDTO).message("thanh cong").build();
     }
 }
