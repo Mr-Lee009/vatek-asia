@@ -93,7 +93,7 @@ CREATE PROCEDURE checlOverLap();
 
 
 DELIMITER $$
-CREATE PROCEDURE checkOverLapV3(IN formDate NVARCHAR(256),IN toDate NVARCHAR(256))
+CREATE PROCEDURE checkOverLapV4(IN formDate NVARCHAR(256),IN toDate NVARCHAR(256))
 BEGIN
     Declare v_Count Integer default 0;
     Declare v_Found Integer default 1;
@@ -121,11 +121,7 @@ BEGIN
             Leave My_Loop;
         End if;
 
-        if _toDate < _query_formDate then
-            set _isOverLap = true;
-        end if;
-
-        if _query_toDate < _formDate then
+        if((_query_formDate <= _toDate) and (_query_toDate >= _formDate)) then
             set _isOverLap = true;
         end if;
 
@@ -141,8 +137,13 @@ END; $$
 DELIMITER ;
 
 
-call checkOverLapV3('2022-11-05 16:41:18','2022-11-10 16:41:26');
+call checkOverLapV3('2022-11-05 16:41:18','2024-11-30 16:41:26');
+
 select * from booking;
 
 select STR_TO_DATE('2022-12-27 16:41:18','%Y-%m-%d %H:%i:%s');
 
+select (StartA <= EndB) and (EndA >= StartB);
+
+select (STR_TO_DATE('2022-12-05 16:41:18','%Y-%m-%d %H:%i:%s') <= STR_TO_DATE('2022-11-05 16:41:18','%Y-%m-%d %H:%i:%s'))
+    and (STR_TO_DATE('2022-12-10 16:41:18','%Y-%m-%d %H:%i:%s') >= STR_TO_DATE('2022-12-04 16:41:18','%Y-%m-%d %H:%i:%s'));
