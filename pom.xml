@@ -65,6 +65,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>nl.captcha</groupId>
+            <artifactId>simplecaptcha</artifactId>
+            <version>1.2.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/lib/simplecaptcha-1.2.1.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
